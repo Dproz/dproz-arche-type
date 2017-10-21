@@ -5,14 +5,16 @@
 
 spring:
     application:
-        name: ${service-name-as-in-package}
+        name: ${artifactId}
     profiles:
       active: local    
     cloud:
         consul:
             discovery:
+                healthCheckPath: /application/health
+                healthCheckInterval: 120s
                 tags: profile=${spring.profiles.active}, version=${info.project.version}
             config:
                 fail-fast: false # if not in "prod" profile, do not force to use Spring Cloud Config
-                format: yaml
+                format: files
                 profile-separator: "-"

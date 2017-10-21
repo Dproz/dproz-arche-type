@@ -1,14 +1,5 @@
 version: '2'
 services:
-    ${service-name-as-in-package}:
-        image: ${service-name-as-in-package}
-        ports:
-            - 8080:8080
-        environment:
-            - SPRING_PROFILES_ACTIVE=local
-            - SPRING_CLOUD_CONSUL_HOST=consul
-            - SPRING_CLOUD_CONSUL_PORT=8500
-            - SPRING_DATA_MONGODB_URI=mongodb://rwUser:rwUserPass@mongo-instance:27017/dproz-dev
     mongo-instance:
         extends:
             file: mongodb.yml

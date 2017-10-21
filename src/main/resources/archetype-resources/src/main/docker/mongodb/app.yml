@@ -24,9 +24,8 @@ services:
     consul-config-loader:
         image: jhipster/consul-config-loader:v0.2.2
         volumes:
-            - ./central-config:/config
+            - ./central-server-config:/config
         environment:
             - INIT_SLEEP_SECONDS=5
             - CONSUL_URL=consul
             - CONSUL_PORT=8500
-            - CONFIG_MODE=git
