@@ -24,16 +24,17 @@
         <include>**/*.properties</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
+    <fileSet filtered="true" encoding="UTF-8">
       <directory>src/main/docker</directory>
       <includes>
         <include>**/*.</include>
+        <include>**/Dockerfile</include>
         <include>**/*.Dockerfile</include>
         <include>**/*.sh</include>
         <include>**/*.yml</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8">
+    <fileSet filtered="true" encoding="UTF-8">
       <directory>src/main/resources</directory>
       <includes>
         <include>**/*.yml</include>

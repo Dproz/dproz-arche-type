@@ -397,7 +397,7 @@
           </execution>
         </executions>
         <configuration>
-          <repository>sampleapp</repository>
+          <repository>${service-name-as-in-package}</repository>
           <tag>latest</tag>
           <contextDirectory>${project.build.directory}</contextDirectory>
         </configuration>

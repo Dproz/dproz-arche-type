@@ -59,7 +59,7 @@ public class DatabaseConfiguration {
 
 	@Bean
 	public Mongobee mongobee(MongoClient mongoClient, MongoTemplate mongoTemplate, MongoProperties mongoProperties) {
-		log.debug("Configuring Mongobee");
+		log.debug("Configuring Mongobee"+uri);
 		Mongobee mongobee = new Mongobee(mongoClient);
 		mongobee.setDbName(mongoProperties.getDatabase());
 		mongobee.setMongoTemplate(mongoTemplate);

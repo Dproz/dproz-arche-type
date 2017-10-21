@@ -21,7 +21,7 @@ configuration:
         ref: Console
         
     Logger:
-        - name: com.ceitechs.dproz
+        - name: ${package}
           level: info
           additivity: false
           AppenderRef: 

@@ -13,5 +13,5 @@ services:
           APP_DB_ADMIN_PASSWORD: appAdminPass
           APP_DB_RW_USER: rwUser
           APP_DB_RW_PASSWORD: rwUserPass
-          APP_DB_NAME: sample-app
+          APP_DB_NAME: ${service-name-as-in-package}
           

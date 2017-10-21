@@ -46,8 +46,8 @@ if [ $result -eq 0 ]; then
     echo "================Switch to Sample database========================================================"
 
     mongo ${APP_DB_NAME} -u ${MONGO_INITDB_ROOT_USERNAME} -p ${MONGO_INITDB_ROOT_PASSWORD} --authenticationDatabase admin --eval '
-		db.createUser( { user: "'${admin_users}'", pwd: "'${admin_pwd}'", roles: [ { role: "userAdmin", db: "${APP_DB_NAME}" } ] } );
-	 	db.createUser( { user: "'${rw_users}'", pwd: "'${rw_pwd}'", roles: [{ role: "readWrite", db: "${APP_DB_NAME}" }] } );' 2>/dev/null
+		db.createUser( { user: "'${admin_users}'", pwd: "'${admin_pwd}'", roles: [ { role: "userAdmin", db: "'${APP_DB_NAME}'" } ] } );
+	 	db.createUser( { user: "'${rw_users}'", pwd: "'${rw_pwd}'", roles: [{ role: "readWrite", db: "'${APP_DB_NAME}'" }] } );' 2>/dev/null
 	
 	echo "================Completed Read Write users creation in Mongo DB=================================================="
 else

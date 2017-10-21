@@ -5,7 +5,7 @@
 
 spring:
     application:
-        name: sampleapp
+        name: ${service-name-as-in-package}
     profiles:
       active: local    
     cloud:
